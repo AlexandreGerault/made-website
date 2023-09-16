@@ -1,13 +1,16 @@
+import useTranslation from "next-translate/useTranslation";
 import Image from "next/image";
 import { ThemeToggle } from "~/components/theme-toggle";
 import { Button } from "~/components/ui/button";
 
 export default function Home() {
+  const { t } = useTranslation("home");
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24 relative">
       <header className="flex flex-col gap-y-4 lg:flex-row justify-between items-center">
         <div className="flex flex-col gap-y-2">
-          <h1 className="text-2xl">C&apos;est quoi Made ?</h1>
+          <h1 className="text-2xl">{t("what")}</h1>
           <p>
             Trouve des idées de projets diverses, obtient les maquettes et la
             correction puis présente tous ça à tes futurs clients.

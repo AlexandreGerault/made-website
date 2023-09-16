@@ -6,7 +6,7 @@ import { NavbarLink } from "./navbar-link";
 import { Button } from "./ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "~/components/ui/dialog";
 import { HiBars3 } from "react-icons/hi2";
-import { useTranslation } from "react-i18next";
+import useTranslation from "next-translate/useTranslation";
 
 const navbarLinks = [
   { id: 1, href: "/projects", title: "projects" },
@@ -14,7 +14,8 @@ const navbarLinks = [
 ];
 
 export function Navbar() {
-  const { t } = useTranslation();
+  const { t } = useTranslation("common");
+
   const classesProps = {
     activeClassName: "font-black",
     className: "text-base font-semibold leading-6",
